@@ -1,0 +1,19 @@
+{
+    "package_name": "Christina_Washington_CV_Benchmarking",
+    "package_version": "1.0.0",
+    "random_seed": 42,
+    "image_size": [
+        64,
+        64
+    ],
+    "color_mode": "rgb",
+    "dataset_type": "array",
+    "test_size": 0.2,
+    "split_strategy": "stratified",
+    "scaling": "Training-data-only scaling for Logistic Regression, SVM, and Neural Network.",
+    "cnn_epochs_max": 20,
+    "cnn_batch_size": 32,
+    "cnn_early_stopping_patience": 3,
+    "cnn_pretrained": false,
+    "augmentation_primary_benchmark": false
+}

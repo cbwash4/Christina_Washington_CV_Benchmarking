@@ -1,0 +1,56 @@
+{
+    "Logistic Regression": {
+        "accuracy": 0.9611111111111111,
+        "macro_precision": 0.9620130442446677,
+        "macro_recall": 0.9611111111111109,
+        "macro_f1": 0.9612402831478838,
+        "weighted_f1": 0.9612402831478837,
+        "training_time_seconds": 0.6777991750000183,
+        "inference_time_ms_per_image": 0.03357164999897577
+    },
+    "Decision Tree": {
+        "accuracy": 0.8944444444444445,
+        "macro_precision": 0.8947616355756548,
+        "macro_recall": 0.8944444444444445,
+        "macro_f1": 0.8944763505626372,
+        "weighted_f1": 0.8944763505626371,
+        "training_time_seconds": 0.276744970999971,
+        "inference_time_ms_per_image": 0.003089388889697552
+    },
+    "Random Forest": {
+        "accuracy": 0.9611111111111111,
+        "macro_precision": 0.9623655913978495,
+        "macro_recall": 0.9611111111111111,
+        "macro_f1": 0.9611833427548521,
+        "weighted_f1": 0.9611833427548522,
+        "training_time_seconds": 0.631310780000149,
+        "inference_time_ms_per_image": 0.2390960333337312
+    },
+    "SVM": {
+        "accuracy": 0.9333333333333333,
+        "macro_precision": 0.9421839680055643,
+        "macro_recall": 0.9333333333333332,
+        "macro_f1": 0.9341256116283629,
+        "weighted_f1": 0.9341256116283628,
+        "training_time_seconds": 0.19858637399988766,
+        "inference_time_ms_per_image": 0.44960708888892337
+    },
+    "Neural Network": {
+        "accuracy": 0.9722222222222222,
+        "macro_precision": 0.9729420059933016,
+        "macro_recall": 0.9722222222222222,
+        "macro_f1": 0.9722595668944402,
+        "weighted_f1": 0.9722595668944402,
+        "training_time_seconds": 0.49294591499983653,
+        "inference_time_ms_per_image": 0.030970483333526824
+    },
+    "Simple CNN": {
+        "accuracy": 0.9722222222222222,
+        "macro_precision": 0.9730888523991972,
+        "macro_recall": 0.9722222222222222,
+        "macro_f1": 0.9723493090222171,
+        "weighted_f1": 0.9723493090222172,
+        "training_time_seconds": 27.443899725999927,
+        "inference_time_ms_per_image": 1.4875608055553535
+    }
+}

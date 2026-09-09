@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Christina_Washington_CV_Benchmarking"
+version = "1.0.0"
+description = "Reusable computer vision image classification benchmarking library."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+authors = [
+    {name = "Christina Washington"}
+]
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "Pillow",
+    "scikit-learn",
+    "matplotlib",
+    "tensorflow"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["christina_washington_cv_benchmarking*"]

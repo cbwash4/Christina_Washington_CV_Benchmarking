@@ -38,7 +38,7 @@ Color modes: grayscale and rgb.
 - Random seed 42
 - Same split used for all six models
 
-## Models
+## Image Classification Models
 
 1. Logistic Regression
 2. Decision Tree

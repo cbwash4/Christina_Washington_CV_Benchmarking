@@ -9,5 +9,6 @@
     "FPS": 531.2142684626231,
     "Parameters": 1534947,
     "Checkpoint Size (MB)": 3.041872024536133,
-    "Peak GPU Memory (MB)": 667.69921875
+    "Peak GPU Memory (MB)": 667.69921875,
+    "Train Time (s)": 75.6846
 }

@@ -6,3 +6,21 @@ build/
 *.egg-info/
 .venv/
 venv/
+
+# Generated model artifacts
+checkpoints/
+weights/
+yolo_runs/
+*.pt
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Runtime/build artifacts
+*.egg-info/
+
+data/yolo_fashion/

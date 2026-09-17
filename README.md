@@ -342,6 +342,39 @@ Example visualizations are stored in:
 Grad-CAM is treated as a qualitative visualization of model activation
 rather than a quantitative measure of explanation quality.
 
+
+## Architecture Evolution
+
+The benchmark spans several generations of image-classification architectures,
+allowing historical and modern design strategies to be compared on the same
+classification task.
+
+- **AlexNet** represents an early deep CNN architecture that helped establish
+  the practical use of deep convolutional networks for image recognition.
+- **VGG16** increased network depth through repeated small convolutional layers,
+  providing a simpler and more uniform design than earlier architectures.
+- **GoogLeNet** introduced the Inception approach, using multiple convolutional
+  operations at different spatial scales within the network.
+- **ResNet18 and ResNet50** introduced residual connections, allowing much
+  deeper networks to be trained more effectively. The two ResNet variants also
+  provide a direct comparison of network depth within one architectural family.
+- **DenseNet121** uses dense connectivity between layers, allowing later layers
+  to receive feature information from earlier layers.
+- **MobileNetV3-Small** emphasizes computational efficiency through lightweight
+  network design, making it relevant to resource-constrained deployment.
+- **EfficientNet-B0** uses a compound scaling strategy to balance network depth,
+  width, and input resolution while controlling computational cost.
+- **ConvNeXt-Tiny** represents a more modern CNN design that revisits
+  convolutional architectures using contemporary deep-learning design choices.
+- **YOLO11n Classification** provides a modern lightweight classification
+  architecture through the Ultralytics classification pipeline.
+
+This progression illustrates that architectural development is not simply a
+matter of increasing network depth or parameter count. The benchmark results
+show that later lightweight architectures can achieve performance comparable
+to substantially larger networks while reducing computational and deployment
+costs.
+
 ## Key Finding
 
 The Assignment 3 experiments demonstrate that predictive performance

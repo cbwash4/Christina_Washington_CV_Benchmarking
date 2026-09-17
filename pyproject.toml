@@ -20,7 +20,10 @@ dependencies = [
     "Pillow",
     "scikit-learn",
     "matplotlib",
-    "tensorflow"
+    "tensorflow",
+    "torch",
+    "torchvision",
+    "ultralytics"
 ]
 
 [tool.setuptools]

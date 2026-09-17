@@ -306,3 +306,155 @@ parameters and smaller checkpoints.
 The benchmark therefore evaluates model selection as a tradeoff among
 classification performance, inference speed, model size, and
 computational requirements.
+
+
+---
+
+# Assignment #3 — Deep Architecture Benchmarking
+
+Assignment #3 extends the original six-model image-classification
+benchmark with ten deep learning architectures and provides a
+standardized comparison across all 16 models.
+
+## Dataset
+
+Fashion-MNIST subset containing three classes:
+
+- T-shirt/top
+- Trouser
+- Pullover
+
+Dataset split:
+
+- Training: 576 images
+- Validation: 144 images
+- Testing: 180 images
+
+Each test class contains 60 images.
+
+## Original Benchmark Models
+
+1. Logistic Regression
+2. Decision Tree
+3. Random Forest
+4. Support Vector Machine
+5. Fully Connected Neural Network
+6. Simple CNN
+
+## Deep Architectures
+
+1. ResNet18
+2. ResNet50
+3. DenseNet121
+4. MobileNetV3-Small
+5. EfficientNet-B0
+6. AlexNet
+7. VGG16
+8. GoogLeNet
+9. ConvNeXt-Tiny
+10. YOLO11n Classification
+
+## Evaluation Metrics
+
+The benchmark evaluates:
+
+- Accuracy
+- Macro Precision
+- Macro Recall
+- Macro F1
+- Weighted F1
+- Per-class Precision
+- Per-class Recall
+- Per-class F1
+- Training Time
+- Inference Latency
+- Inference Throughput (FPS)
+- Parameter Count
+- Trainable Parameter Count
+- Checkpoint Size
+- Peak GPU Memory
+- MACs
+- Approximate FLOPs
+
+Macro F1 is used as the primary overall classification metric.
+
+Computational complexity is reported using MACs and approximate
+FLOPs, with the convention that one MAC is approximately two FLOPs.
+
+## Standardized Inference Benchmark
+
+Deep-model inference latency and throughput were measured using
+at least 1,000 inference images per architecture.
+
+## Explainability
+
+Grad-CAM visualizations were generated for:
+
+- ResNet18
+- MobileNetV3-Small
+- VGG16
+
+These visualizations provide qualitative evidence of image regions
+contributing to model predictions.
+
+## Combined Benchmark
+
+The final comparison contains:
+
+- 6 original benchmark models
+- 10 deep architectures
+- 16 models total
+
+Primary combined results:
+
+`combined_ml_cnn_benchmark_results.csv`
+
+Additional detailed results are stored in:
+
+`results/`
+
+## Per-Class Analysis
+
+Per-class precision, recall, F1, and support are provided for all
+16 models across:
+
+- T-shirt/top
+- Trouser
+- Pullover
+
+Combined per-class results:
+
+`results/combined_16_model_per_class_metrics.csv`
+
+## Visualizations
+
+Combined comparison plots include:
+
+- Accuracy comparison
+- Macro F1 comparison
+- Training-time comparison
+- Inference-throughput comparison
+- Parameter comparison
+- Checkpoint-size comparison
+- Accuracy versus parameter count
+- Accuracy versus inference latency
+- Per-class F1 comparison
+
+Plots are stored in:
+
+`combined_comparison_plots/`
+
+Individual deep-model confusion matrices and training curves are
+also included in the repository.
+
+## Reproducibility
+
+Random seed: 42
+
+The same held-out test set of 180 images was used for standardized
+classification evaluation.
+
+Large datasets, model checkpoints, downloaded pretrained weights,
+and temporary YOLO training artifacts are excluded from version
+control.
+

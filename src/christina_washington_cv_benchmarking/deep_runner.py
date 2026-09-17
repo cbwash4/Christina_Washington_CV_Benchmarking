@@ -89,13 +89,17 @@ def run_experiment(
         "Macro Precision": evaluation["macro_precision"],
         "Macro Recall": evaluation["macro_recall"],
         "Macro F1": evaluation["macro_f1"],
+        "Weighted Precision": evaluation["weighted_precision"],
+        "Weighted Recall": evaluation["weighted_recall"],
         "Weighted F1": evaluation["weighted_f1"],
         "Best Val Accuracy": training["best_val_accuracy"],
         "Best Epoch": training["best_epoch"],
         "Train Time (s)": training["total_training_time"],
         "Infer (ms/img)": evaluation["inference_ms_per_image"],
         "FPS": evaluation["fps"],
+        "Inference Benchmark Images": evaluation["inference_benchmark_images"],
         "Parameters": evaluation["parameter_count"],
+        "Trainable Parameters": evaluation["trainable_parameter_count"],
         "Checkpoint Size (MB)": evaluation["checkpoint_size_mb"],
         "Peak GPU Memory (MB)": evaluation["peak_gpu_memory_mb"]
     }

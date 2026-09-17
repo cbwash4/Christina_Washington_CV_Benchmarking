@@ -1,0 +1,49 @@
+Model,Benchmark Group,Class,Precision,Recall,F1,Support
+Decision Tree,Original Benchmark,Pullover,0.913793103448276,0.8833333333333333,0.8983050847457628,60
+Decision Tree,Original Benchmark,T-shirt/top,0.8524590163934426,0.8666666666666667,0.859504132231405,60
+Decision Tree,Original Benchmark,Trouser,0.918032786885246,0.9333333333333332,0.9256198347107438,60
+Logistic Regression,Original Benchmark,Pullover,0.9344262295081968,0.95,0.9421487603305784,60
+Logistic Regression,Original Benchmark,T-shirt/top,0.9516129032258064,0.9833333333333332,0.9672131147540984,60
+Logistic Regression,Original Benchmark,Trouser,1.0,0.95,0.9743589743589745,60
+Neural Network,Original Benchmark,Pullover,0.9516129032258064,0.9833333333333332,0.9672131147540984,60
+Neural Network,Original Benchmark,T-shirt/top,0.9672131147540984,0.9833333333333332,0.975206611570248,60
+Neural Network,Original Benchmark,Trouser,1.0,0.95,0.9743589743589745,60
+Random Forest,Original Benchmark,Pullover,0.9516129032258064,0.9833333333333332,0.9672131147540984,60
+Random Forest,Original Benchmark,T-shirt/top,0.935483870967742,0.9666666666666668,0.9508196721311476,60
+Random Forest,Original Benchmark,Trouser,1.0,0.9333333333333332,0.9655172413793104,60
+SVM,Original Benchmark,Pullover,0.9814814814814816,0.8833333333333333,0.9298245614035088,60
+SVM,Original Benchmark,T-shirt/top,0.8450704225352113,1.0,0.916030534351145,60
+SVM,Original Benchmark,Trouser,1.0,0.9166666666666666,0.9565217391304348,60
+Simple CNN,Original Benchmark,Pullover,0.9827586206896552,0.95,0.9661016949152542,60
+Simple CNN,Original Benchmark,T-shirt/top,0.9365079365079364,0.9833333333333332,0.959349593495935,60
+Simple CNN,Original Benchmark,Trouser,1.0,0.9833333333333332,0.9915966386554622,60
+alexnet,Deep Architecture,Pullover,0.935483870967742,0.9666666666666668,0.9508196721311476,60
+alexnet,Deep Architecture,T-shirt/top,0.9655172413793104,0.9333333333333332,0.9491525423728814,60
+alexnet,Deep Architecture,Trouser,1.0,1.0,1.0,60
+convnext_tiny,Deep Architecture,Pullover,0.9516129032258064,0.9833333333333332,0.9672131147540984,60
+convnext_tiny,Deep Architecture,T-shirt/top,0.9827586206896552,0.95,0.9661016949152542,60
+convnext_tiny,Deep Architecture,Trouser,1.0,1.0,1.0,60
+densenet121,Deep Architecture,Pullover,0.9666666666666668,0.9666666666666668,0.9666666666666668,60
+densenet121,Deep Architecture,T-shirt/top,0.9666666666666668,0.9666666666666668,0.9666666666666668,60
+densenet121,Deep Architecture,Trouser,1.0,1.0,1.0,60
+efficientnet_b0,Deep Architecture,Pullover,0.9516129032258064,0.9833333333333332,0.9672131147540984,60
+efficientnet_b0,Deep Architecture,T-shirt/top,0.9827586206896552,0.95,0.9661016949152542,60
+efficientnet_b0,Deep Architecture,Trouser,1.0,1.0,1.0,60
+googlenet,Deep Architecture,Pullover,0.95,0.95,0.95,60
+googlenet,Deep Architecture,T-shirt/top,0.9344262295081968,0.95,0.9421487603305784,60
+googlenet,Deep Architecture,Trouser,1.0,0.9833333333333332,0.9915966386554622,60
+mobilenet_v3_small,Deep Architecture,Pullover,0.9672131147540984,0.9833333333333332,0.975206611570248,60
+mobilenet_v3_small,Deep Architecture,T-shirt/top,0.9830508474576272,0.9666666666666668,0.9747899159663864,60
+mobilenet_v3_small,Deep Architecture,Trouser,1.0,1.0,1.0,60
+resnet18,Deep Architecture,Pullover,0.9516129032258064,0.9833333333333332,0.9672131147540984,60
+resnet18,Deep Architecture,T-shirt/top,0.9827586206896552,0.95,0.9661016949152542,60
+resnet18,Deep Architecture,Trouser,1.0,1.0,1.0,60
+resnet50,Deep Architecture,Pullover,0.9375,1.0,0.967741935483871,60
+resnet50,Deep Architecture,T-shirt/top,1.0,0.9333333333333332,0.9655172413793104,60
+resnet50,Deep Architecture,Trouser,1.0,1.0,1.0,60
+vgg16,Deep Architecture,Pullover,0.967741935483871,1.0,0.9836065573770492,60
+vgg16,Deep Architecture,T-shirt/top,1.0,0.95,0.9743589743589745,60
+vgg16,Deep Architecture,Trouser,0.9836065573770492,1.0,0.9917355371900828,60
+yolo11n_cls,Deep Architecture,Pullover,0.9672131147540983,0.9833333333333333,0.9752066115702479,60
+yolo11n_cls,Deep Architecture,T-shirt/top,0.9830508474576272,0.9666666666666667,0.9747899159663865,60
+yolo11n_cls,Deep Architecture,Trouser,1.0,1.0,1.0,60

@@ -27,9 +27,15 @@ def evaluate_model(
     all_labels = []
     all_predictions = []
 
-    # Parameter count
+    # Parameter counts
     parameter_count = sum(
         p.numel() for p in model.parameters()
+    )
+
+    trainable_parameter_count = sum(
+        p.numel()
+        for p in model.parameters()
+        if p.requires_grad
     )
 
     # Checkpoint size
@@ -55,12 +61,9 @@ def evaluate_model(
 
             break
 
-    if device == "cuda":
-        torch.cuda.synchronize()
-
-    start_time = time.perf_counter()
-    total_images = 0
-
+    # --------------------------------------------------
+    # Classification evaluation on the fixed test set
+    # --------------------------------------------------
     with torch.no_grad():
 
         for inputs, labels in test_loader:
@@ -83,7 +86,35 @@ def evaluate_model(
                 predictions.cpu().numpy()
             )
 
-            total_images += labels.size(0)
+    # --------------------------------------------------
+    # Dedicated inference benchmark
+    # At least 1,000 image inferences as required
+    # --------------------------------------------------
+    min_benchmark_images = 1000
+    benchmark_images = 0
+
+    if device == "cuda":
+        torch.cuda.synchronize()
+
+    start_time = time.perf_counter()
+
+    with torch.no_grad():
+
+        while benchmark_images < min_benchmark_images:
+
+            for inputs, _ in test_loader:
+
+                inputs = inputs.to(device)
+
+                outputs = model(inputs)
+
+                if hasattr(outputs, "logits"):
+                    outputs = outputs.logits
+
+                benchmark_images += inputs.size(0)
+
+                if benchmark_images >= min_benchmark_images:
+                    break
 
     if device == "cuda":
         torch.cuda.synchronize()
@@ -94,12 +125,12 @@ def evaluate_model(
 
     inference_ms_per_image = (
         total_inference_time
-        / total_images
+        / benchmark_images
         * 1000
     )
 
     fps = (
-        total_images / total_inference_time
+        benchmark_images / total_inference_time
     )
 
     all_labels = np.array(all_labels)
@@ -128,6 +159,20 @@ def evaluate_model(
         all_labels,
         all_predictions,
         average="macro",
+        zero_division=0
+    )
+
+    weighted_precision = precision_score(
+        all_labels,
+        all_predictions,
+        average="weighted",
+        zero_division=0
+    )
+
+    weighted_recall = recall_score(
+        all_labels,
+        all_predictions,
+        average="weighted",
         zero_division=0
     )
 
@@ -164,10 +209,14 @@ def evaluate_model(
         "macro_precision": macro_precision,
         "macro_recall": macro_recall,
         "macro_f1": macro_f1,
+        "weighted_precision": weighted_precision,
+        "weighted_recall": weighted_recall,
         "weighted_f1": weighted_f1,
         "inference_ms_per_image": inference_ms_per_image,
         "fps": fps,
+        "inference_benchmark_images": benchmark_images,
         "parameter_count": parameter_count,
+        "trainable_parameter_count": trainable_parameter_count,
         "checkpoint_size_mb": checkpoint_size_mb,
         "peak_gpu_memory_mb": peak_gpu_memory_mb,
         "confusion_matrix": cm,

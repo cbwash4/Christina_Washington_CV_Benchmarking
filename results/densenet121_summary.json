@@ -1,0 +1,16 @@
+{
+    "Model": "densenet121",
+    "Accuracy": 0.9777777777777777,
+    "Macro Precision": 0.9777777777777779,
+    "Macro Recall": 0.9777777777777779,
+    "Macro F1": 0.9777777777777779,
+    "Weighted F1": 0.9777777777777777,
+    "Best Val Accuracy": 0.9930555555555556,
+    "Best Epoch": 15,
+    "Train Time (s)": 137.55246305465698,
+    "Infer (ms/img)": 4.569766761111775,
+    "FPS": 218.8295491380201,
+    "Parameters": 6956931,
+    "Checkpoint Size (MB)": 27.12184715270996,
+    "Peak GPU Memory (MB)": 571.45166015625
+}

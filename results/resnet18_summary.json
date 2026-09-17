@@ -1,0 +1,16 @@
+{
+    "Model": "resnet18",
+    "Accuracy": 0.9777777777777777,
+    "Macro Precision": 0.978123841305154,
+    "Macro Recall": 0.9777777777777777,
+    "Macro F1": 0.9777716032231175,
+    "Weighted F1": 0.9777716032231175,
+    "Best Val Accuracy": 0.9861111111111112,
+    "Best Epoch": 6,
+    "Train Time (s)": 48.70876383781433,
+    "Infer (ms/img)": 2.5879917999999535,
+    "FPS": 386.39998782067937,
+    "Parameters": 11178051,
+    "Checkpoint Size (MB)": 42.71717357635498,
+    "Peak GPU Memory (MB)": 509.06103515625
+}

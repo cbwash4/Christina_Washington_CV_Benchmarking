@@ -1,0 +1,16 @@
+{
+    "Model": "mobilenet_v3_small",
+    "Accuracy": 0.9833333333333333,
+    "Macro Precision": 0.9834213207372419,
+    "Macro Recall": 0.9833333333333334,
+    "Macro F1": 0.9833321758455448,
+    "Weighted F1": 0.9833321758455447,
+    "Best Val Accuracy": 0.9930555555555556,
+    "Best Epoch": 12,
+    "Train Time (s)": 36.64152121543884,
+    "Infer (ms/img)": 2.5410182666670758,
+    "FPS": 393.5430190006658,
+    "Parameters": 1520931,
+    "Checkpoint Size (MB)": 5.933402061462402,
+    "Peak GPU Memory (MB)": 285.42041015625
+}

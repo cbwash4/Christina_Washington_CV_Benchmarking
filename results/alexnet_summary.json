@@ -1,0 +1,16 @@
+{
+    "Model": "alexnet",
+    "Accuracy": 0.9666666666666667,
+    "Macro Precision": 0.9670003707823508,
+    "Macro Recall": 0.9666666666666667,
+    "Macro F1": 0.9666574048346762,
+    "Weighted F1": 0.9666574048346763,
+    "Best Val Accuracy": 0.9583333333333334,
+    "Best Epoch": 10,
+    "Train Time (s)": 35.76556730270386,
+    "Infer (ms/img)": 2.286055727778249,
+    "FPS": 437.43465561614755,
+    "Parameters": 57016131,
+    "Checkpoint Size (MB)": 217.50552463531494,
+    "Peak GPU Memory (MB)": 758.63916015625
+}

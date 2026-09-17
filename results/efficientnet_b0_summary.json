@@ -1,0 +1,16 @@
+{
+    "Model": "efficientnet_b0",
+    "Accuracy": 0.9777777777777777,
+    "Macro Precision": 0.978123841305154,
+    "Macro Recall": 0.9777777777777777,
+    "Macro F1": 0.9777716032231175,
+    "Weighted F1": 0.9777716032231175,
+    "Best Val Accuracy": 0.9930555555555556,
+    "Best Epoch": 16,
+    "Train Time (s)": 71.2491660118103,
+    "Infer (ms/img)": 4.501207527778206,
+    "FPS": 222.16260721789016,
+    "Parameters": 4011391,
+    "Checkpoint Size (MB)": 15.591374397277832,
+    "Peak GPU Memory (MB)": 563.8486328125
+}

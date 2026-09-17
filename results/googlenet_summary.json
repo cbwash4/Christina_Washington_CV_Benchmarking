@@ -1,0 +1,16 @@
+{
+    "Model": "googlenet",
+    "Accuracy": 0.9611111111111111,
+    "Macro Precision": 0.9614754098360656,
+    "Macro Recall": 0.9611111111111109,
+    "Macro F1": 0.9612484663286803,
+    "Weighted F1": 0.9612484663286802,
+    "Best Val Accuracy": 0.9861111111111112,
+    "Best Epoch": 2,
+    "Train Time (s)": 62.148544788360596,
+    "Infer (ms/img)": 2.9359240777795192,
+    "FPS": 340.6082628527349,
+    "Parameters": 9939113,
+    "Checkpoint Size (MB)": 38.09589099884033,
+    "Peak GPU Memory (MB)": 611.5166015625
+}

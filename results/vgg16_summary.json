@@ -1,0 +1,16 @@
+{
+    "Model": "vgg16",
+    "Accuracy": 0.9833333333333333,
+    "Macro Precision": 0.9837828309536402,
+    "Macro Recall": 0.9833333333333334,
+    "Macro F1": 0.9832336896420353,
+    "Weighted F1": 0.9832336896420354,
+    "Best Val Accuracy": 0.9861111111111112,
+    "Best Epoch": 9,
+    "Train Time (s)": 207.43472599983215,
+    "Infer (ms/img)": 6.238070494444198,
+    "FPS": 160.30597937144637,
+    "Parameters": 134272835,
+    "Checkpoint Size (MB)": 512.2217302322388,
+    "Peak GPU Memory (MB)": 3787.89697265625
+}

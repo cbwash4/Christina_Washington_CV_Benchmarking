@@ -1,0 +1,16 @@
+{
+    "Model": "convnext_tiny",
+    "Accuracy": 0.9777777777777777,
+    "Macro Precision": 0.978123841305154,
+    "Macro Recall": 0.9777777777777777,
+    "Macro F1": 0.9777716032231175,
+    "Weighted F1": 0.9777716032231175,
+    "Best Val Accuracy": 0.9861111111111112,
+    "Best Epoch": 13,
+    "Train Time (s)": 226.50647950172424,
+    "Infer (ms/img)": 17.53053178888927,
+    "FPS": 57.04333513908534,
+    "Parameters": 27822435,
+    "Checkpoint Size (MB)": 106.19974422454834,
+    "Peak GPU Memory (MB)": 795.72802734375
+}

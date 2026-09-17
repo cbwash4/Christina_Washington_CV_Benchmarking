@@ -179,10 +179,13 @@ The deep benchmark records:
 - Average Inference Time
 - Frames Per Second (FPS)
 - Parameter Count
+- Trainable Parameter Count
 - Checkpoint Size
 - Peak GPU Memory
+- MACs
+- Approximate FLOPs
 - Confusion Matrix
-- Per-Class Metrics
+- Per-Class Precision, Recall, F1, and Support
 
 Macro F1 is used as the primary predictive-performance comparison
 metric.
@@ -204,9 +207,12 @@ The strongest test results were approximately:
 | AlexNet | 0.9667 | 0.9667 | 2.286 |
 | GoogLeNet | 0.9611 | 0.9612 | 2.936 |
 
-Full-precision results are available in:
+Complete standardized deep-model results are available in:
 
-`results/deep_model_master_comparison.csv`
+`results/deep_model_complete_results.csv`
+
+Computational complexity is reported using MACs and approximate FLOPs,
+using the convention that one MAC is approximately two FLOPs.
 
 ## Original Benchmark vs. Deep Architectures
 
@@ -215,9 +221,13 @@ the six models from the original benchmarking library.
 
 The combined comparison contains 16 models.
 
-Results are stored in:
+The final standardized combined benchmark is stored in:
 
-`results/final_16_model_comparison.csv`
+`combined_ml_cnn_benchmark_results.csv`
+
+A second copy is retained in:
+
+`results/combined_ml_cnn_benchmark_results.csv`
 
 The results show that increased model size does not necessarily produce
 higher classification performance on this benchmark.
@@ -228,6 +238,28 @@ substantially more parameters and storage.
 
 Similarly, ResNet50 did not improve test accuracy over ResNet18 despite
 its greater model complexity.
+
+## Standardized Inference Benchmark
+
+Deep-model inference latency and throughput were measured using at
+least 1,000 inference images per architecture to provide a more stable
+runtime comparison than a single small test-set pass.
+
+The standardized deep-model results also include total and trainable
+parameter counts, checkpoint size, peak GPU memory, MACs, and
+approximate FLOPs.
+
+## Per-Class Analysis
+
+Per-class precision, recall, F1, and support were standardized across
+all 16 models for the three Fashion-MNIST classes.
+
+The combined per-class results contain 48 rows: three classes for each
+of the 16 models.
+
+Results are stored in:
+
+`results/combined_16_model_per_class_metrics.csv`
 
 ## Confusion Matrices
 
@@ -271,6 +303,22 @@ They include comparisons of:
 - Accuracy versus parameter count
 - Macro F1 across all 16 evaluated models
 
+Additional final 16-model comparison figures are stored in:
+
+`combined_comparison_plots/`
+
+These include:
+
+- Accuracy comparison
+- Macro F1 comparison
+- Training-time comparison
+- Inference-throughput comparison
+- Parameter comparison
+- Checkpoint-size comparison
+- Accuracy versus parameter count
+- Accuracy versus inference latency
+- Per-class F1 comparison
+
 ## Grad-CAM
 
 Grad-CAM visualizations were generated for three representative
@@ -309,152 +357,3 @@ computational requirements.
 
 
 ---
-
-# Assignment #3 — Deep Architecture Benchmarking
-
-Assignment #3 extends the original six-model image-classification
-benchmark with ten deep learning architectures and provides a
-standardized comparison across all 16 models.
-
-## Dataset
-
-Fashion-MNIST subset containing three classes:
-
-- T-shirt/top
-- Trouser
-- Pullover
-
-Dataset split:
-
-- Training: 576 images
-- Validation: 144 images
-- Testing: 180 images
-
-Each test class contains 60 images.
-
-## Original Benchmark Models
-
-1. Logistic Regression
-2. Decision Tree
-3. Random Forest
-4. Support Vector Machine
-5. Fully Connected Neural Network
-6. Simple CNN
-
-## Deep Architectures
-
-1. ResNet18
-2. ResNet50
-3. DenseNet121
-4. MobileNetV3-Small
-5. EfficientNet-B0
-6. AlexNet
-7. VGG16
-8. GoogLeNet
-9. ConvNeXt-Tiny
-10. YOLO11n Classification
-
-## Evaluation Metrics
-
-The benchmark evaluates:
-
-- Accuracy
-- Macro Precision
-- Macro Recall
-- Macro F1
-- Weighted F1
-- Per-class Precision
-- Per-class Recall
-- Per-class F1
-- Training Time
-- Inference Latency
-- Inference Throughput (FPS)
-- Parameter Count
-- Trainable Parameter Count
-- Checkpoint Size
-- Peak GPU Memory
-- MACs
-- Approximate FLOPs
-
-Macro F1 is used as the primary overall classification metric.
-
-Computational complexity is reported using MACs and approximate
-FLOPs, with the convention that one MAC is approximately two FLOPs.
-
-## Standardized Inference Benchmark
-
-Deep-model inference latency and throughput were measured using
-at least 1,000 inference images per architecture.
-
-## Explainability
-
-Grad-CAM visualizations were generated for:
-
-- ResNet18
-- MobileNetV3-Small
-- VGG16
-
-These visualizations provide qualitative evidence of image regions
-contributing to model predictions.
-
-## Combined Benchmark
-
-The final comparison contains:
-
-- 6 original benchmark models
-- 10 deep architectures
-- 16 models total
-
-Primary combined results:
-
-`combined_ml_cnn_benchmark_results.csv`
-
-Additional detailed results are stored in:
-
-`results/`
-
-## Per-Class Analysis
-
-Per-class precision, recall, F1, and support are provided for all
-16 models across:
-
-- T-shirt/top
-- Trouser
-- Pullover
-
-Combined per-class results:
-
-`results/combined_16_model_per_class_metrics.csv`
-
-## Visualizations
-
-Combined comparison plots include:
-
-- Accuracy comparison
-- Macro F1 comparison
-- Training-time comparison
-- Inference-throughput comparison
-- Parameter comparison
-- Checkpoint-size comparison
-- Accuracy versus parameter count
-- Accuracy versus inference latency
-- Per-class F1 comparison
-
-Plots are stored in:
-
-`combined_comparison_plots/`
-
-Individual deep-model confusion matrices and training curves are
-also included in the repository.
-
-## Reproducibility
-
-Random seed: 42
-
-The same held-out test set of 180 images was used for standardized
-classification evaluation.
-
-Large datasets, model checkpoints, downloaded pretrained weights,
-and temporary YOLO training artifacts are excluded from version
-control.
-
